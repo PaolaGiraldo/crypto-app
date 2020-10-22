@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master
+- master/crypto
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -16,8 +16,8 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    cd crypto/
     npm install -g @angular/cli
     npm install
-    cd crypto/
     ng build --prod
-  displayName: 'npm install and build ...'
+  displayName: 'npm install and build'
