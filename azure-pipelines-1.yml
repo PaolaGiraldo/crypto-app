@@ -17,6 +17,7 @@ steps:
 
 - script: |
     cd crypto/
+    echo 'TEST'
     npm install -g @angular/cli
     npm install
     npm install @angular-devkit/build-angular
