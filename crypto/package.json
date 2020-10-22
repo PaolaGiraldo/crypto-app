@@ -29,6 +29,7 @@
     "@angular/router": "~10.1.5",
     "@briebug/jest": "^1.3.1",
     "@briebug/jest-schematic": "^3.0.0",
+    "chokidar": "^3.4.3",
     "igniteui-angular": "^9.1.19",
     "ngx-infinite-scroll": "^9.1.0",
     "rxjs": "~6.6.0",
@@ -36,7 +37,7 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1001.6",
+    "@angular-devkit/build-angular": "^0.1001.7",
     "@angular/cli": "~10.1.6",
     "@angular/compiler-cli": "~10.1.5",
     "@angular/localize": "^10.1.5",
