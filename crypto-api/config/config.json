@@ -1,0 +1,14 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "crypto-db.sqlite"
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": "crypto-db.sqlite"
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "crypto-db.sqlite"
+  }
+}

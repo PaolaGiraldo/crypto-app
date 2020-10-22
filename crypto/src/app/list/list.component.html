@@ -1,0 +1,34 @@
+<table mat-table [dataSource]="dataSource">
+  <ng-container   matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef>Nombre</th>
+    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+  </ng-container>
+
+  <ng-container  matColumnDef="precio">
+    <th mat-header-cell *matHeaderCellDef>Precio</th>
+    <td mat-cell *matCellDef="let element" class="text-price">$ {{ element.price | number:'1.3' }}</td>
+  </ng-container>
+
+  <ng-container  matColumnDef="criptomoneda">
+    <th mat-header-cell *matHeaderCellDef>Criptomoneda</th>
+    <td mat-cell *matCellDef="let element"
+      [ngClass]="element.type == 'CRYPTO' ? 'isCrypto' : (element.type != 'CRYPTO' ? 'noCrypto' : 'status-code-empty')">
+      <ng-container *ngIf="element.type == 'CRYPTO'">
+        <span class="dot"></span>
+        SI </ng-container>
+      <ng-container *ngIf="element.type != 'CRYPTO'">
+        <span class="dot"></span> NO </ng-container>
+    </td>
+  </ng-container>
+
+  <ng-container  matColumnDef="convertir">
+    <th mat-header-cell *matHeaderCellDef>Convertir</th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button [routerLink]="'/cambio'" [queryParams]="{ convertFrom: element.symbol }">
+        <img class="png-icon" src="../../assets/shuffle.png" />
+      </button>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns" class="mat-elevation-z2"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
