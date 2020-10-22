@@ -19,5 +19,6 @@ steps:
     cd crypto/
     npm install -g @angular/cli
     npm install
+    npm install @angular-devkit/build-angular
     ng build --prod
   displayName: 'npm install and build'
